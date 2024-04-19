@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #fff;
+        }
+        .container {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #666;
+            border-radius: 3px;
+            box-sizing: border-box;
+            background-color: #222;
+            color: #fff;
+        }
+        input[type="submit"] {
+            background-color: #4caf50;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .password-generator {
+            background-color: #444;
+            padding: 10px;
+            border-radius: 3px;
+            text-align: center;
+        }
+        .generated-password {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #666;
+            border-radius: 3px;
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: #333;
+        }
+        .navbar .logout {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a class="logout" href="/logout">Logout</a>
+    </div>
+    <div class="container">
+        <h2>Register</h2>
+        <form action="/register" method="post">
+            <input type="text" name="username" placeholder="Username" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required><br>
+                <div class="password-generator">
+                    <label for="generated_password">Generated Password:</label><br>
+                    <input type="text" id="generated_password" name="generated_password" readonly><br>
+                    <button type="button" onclick="generatePassword()">Generate Password</button>
+                </div>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+    <script>
+        function generatePassword() {
+            var length = 15;
+            var smallLetters = 'abcdefghijklmnopqrstuvwxyz';
+            var bigLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            var numbers = '0123456789';
+            var symbols = '@#$%=:?.|~>*()/';
+            var possibleCharacters = [smallLetters, bigLetters, numbers, symbols];
+
+            var randDigit = smallLetters.charAt(Math.floor(Math.random() * smallLetters.length));
+            var randSymbol = symbols.charAt(Math.floor(Math.random() * symbols.length));
+            var randSmallLetters = smallLetters.charAt(Math.floor(Math.random() * smallLetters.length));
+            var randBigLetters = bigLetters.charAt(Math.floor(Math.random() * bigLetters.length));
+
+            var tempPass = randDigit + randSymbol + randSmallLetters + randBigLetters;
+
+            for (var i = 0; i < length - 4; i++) {
+                var randomChar = possibleCharacters[Math.floor(Math.random() * possibleCharacters.length)];
+                tempPass += randomChar.charAt(Math.floor(Math.random() * randomChar.length));
+            }
+
+            var passwordInput = document.getElementById("generated_password");
+            passwordInput.value = tempPass;
+        }
+    </script>
+
+
+</body>
+</html>
