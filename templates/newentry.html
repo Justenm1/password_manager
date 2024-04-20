@@ -87,10 +87,10 @@
         <form action="/add_entry" method="post">
             <label for="site">Site:</label>
             <input type="text" id="site" name="site" required><br>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required><br>
-            <label for="password">Password:</label>
-            <input type="text" id="password" name="password" required>
+            <label for="site_username">Username:</label>
+            <input type="text" id="site_username" name="site_username" required><br>
+            <label for="site_password">Password:</label>
+            <input type="text" id="site_password" name="site_password" required>
             <button type="button" id="generate-password" onclick="generatePassword()">Generate Strong Password</button>
             <div class="password-strength" id="password-strength"></div>
             <button type="submit">Submit</button>
@@ -122,6 +122,8 @@
                 var passwordInput = document.getElementById("password");
                 passwordInput.value = tempPass;
             }
+
+
         </script>
 
     </script>

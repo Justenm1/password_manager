@@ -1,8 +1,5 @@
 from flask import session
 
-
-from modules.globals import app, db
-
 def create_session(user_id, user, role):
     """ Create a session for the user
     """
@@ -10,3 +7,8 @@ def create_session(user_id, user, role):
     session['id'] = user_id
     session['username'] = user
     session['role'] = role
+
+def logged_in():
+    """ Check if the user is logged in
+    """
+    return 'logged_in' in session
