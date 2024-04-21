@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cffffbc2-ca88-433c-a5d1-78edcc3ee691" name="Changes" comment="Creating a new baseline to start version control">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/users.db" afterDir="false" />
+    <list default="true" id="cffffbc2-ca88-433c-a5d1-78edcc3ee691" name="Changes" comment="Created the database and admin user profile.">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/db_classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/db_classes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/users.db" beforeDir="false" afterPath="$PROJECT_DIR$/instances/users.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,7 +60,7 @@
     "Python.db_classes.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "add-new-entry-creation",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -146,7 +146,7 @@
       <updated>1713566683779</updated>
       <workItem from="1713566684794" duration="3012000" />
       <workItem from="1713574119176" duration="1723000" />
-      <workItem from="1713646297971" duration="3984000" />
+      <workItem from="1713646297971" duration="5689000" />
     </task>
     <task id="LOCAL-00001" summary="created base files needed to start project over">
       <option name="closed" value="true" />
@@ -180,7 +180,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713658710312</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Created the database and admin user profile.">
+      <option name="closed" value="true" />
+      <created>1713660011759</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713660011759</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Created the database and admin user profile.">
+      <option name="closed" value="true" />
+      <created>1713660151012</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713660151012</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,10 +207,11 @@
     <MESSAGE value="created base files needed to start project over" />
     <MESSAGE value="Create README.md" />
     <MESSAGE value="Creating a new baseline to start version control" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating a new baseline to start version control" />
+    <MESSAGE value="Created the database and admin user profile." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created the database and admin user profile." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/password_manager$app.coverage" NAME="app Coverage Results" MODIFIED="1713646395149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/password_manager$db_classes.coverage" NAME="db_classes Coverage Results" MODIFIED="1713659894699" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
+    <SUITE FILE_PATH="coverage/password_manager$db_classes.coverage" NAME="db_classes Coverage Results" MODIFIED="1713661582526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
   </component>
 </project>

@@ -56,10 +56,11 @@ def adduserentry(session, user_id, site, site_username, site_password):
     print("Entry added successfully")
 
 
-db = "sqlite:///users.db"
+db = "sqlite:///C:/Users/juste/password_manager/instances/users.db"
 engine = create_engine(db)
 Base.metadata.create_all(bind=engine)
 
 Session = sessionmaker(bind=engine)
 session = Session()
 
+adduser(session, username='Justen', password='<test123>', role='admin')
